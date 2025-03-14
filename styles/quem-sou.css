@@ -1,0 +1,313 @@
+.section-quem-sou {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a subtle background pattern/effect */
+.section-quem-sou::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(204, 0, 0, 0.05) 25%, transparent 25%),
+                      linear-gradient(225deg, rgba(204, 0, 0, 0.05) 25%, transparent 25%),
+                      linear-gradient(45deg, rgba(204, 0, 0, 0.05) 25%, transparent 25%),
+                      linear-gradient(315deg, rgba(204, 0, 0, 0.05) 25%, transparent 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.section-quem-sou .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-quem-sou .section-title {
+    color: var(--light-text);
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.section-quem-sou .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.quem-sou-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.quem-sou-imagem {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+}
+
+.quem-sou-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.quem-sou-imagem img:hover {
+    transform: scale(1.05);
+}
+
+.quem-sou-texto {
+    text-align: left;
+}
+
+.quem-sou-texto h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: relative;
+    display: block;
+}
+
+.quem-sou-texto h3::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Garantia h3 não deve ter a linha amarela */
+.garantia h3::before {
+    display: none;
+}
+.credentials-list {
+    margin-bottom: 30px;
+}
+
+.credentials-list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+    text-align: left;
+    display: inline-block;
+}
+
+.credentials-list li:hover {
+    transform: translateX(5px);
+}
+
+.credentials-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    background-color: rgba(204, 0, 0, 0.1);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.credentials-list li:hover:before {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.garantia {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.garantia:hover {
+    transform: translateY(-5px) translateZ(0);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.garantia-icon {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background-color: var(--accent-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.garantia-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary-color);
+}
+
+.garantia h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.garantia p {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    opacity: 0.9;
+}
+
+.quem-sou-imagem {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.quem-sou-imagem::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #ff6b00 50%, var(--primary-color) 100%);
+    border-radius: calc(var(--border-radius) + 6px);
+    z-index: -1;
+    animation: border-pulse 3s infinite;
+    box-shadow: 0 0 20px rgba(204, 0, 0, 0.5);
+}
+
+.quem-sou-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+.quem-sou-imagem:hover img {
+    transform: scale(1.03);
+}
+
+/* Pulse animation for the border - reusing from transformacoes.css */
+@keyframes border-pulse {
+    0% {
+        opacity: 0.8;
+        box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 107, 0, 0.7);
+    }
+    100% {
+        opacity: 0.8;
+        box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .quem-sou-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .quem-sou-texto {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quem-sou-imagem {
+        order: 1;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+    .section-quem-sou .section-title {
+        font-size: 2.8rem;
+    }
+    
+    .quem-sou-texto h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-quem-sou .section-title {
+        font-size: 2.3rem;
+    }
+    
+    .quem-sou-texto h3 {
+        font-size: 1.8rem;
+    }
+    
+    .credentials-list li {
+        font-size: 1rem;
+        padding-left: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .garantia {
+        padding: 20px;
+    }
+    
+    .garantia h3 {
+        font-size: 1.2rem;
+    }
+    
+    .garantia p {
+        font-size: 1rem;
+    }
+}

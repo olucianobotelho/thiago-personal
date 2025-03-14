@@ -1,0 +1,47 @@
+Estrutura do site(na ordem)
+<foto banner.png no fundo e Formulario no canto direito da tela que dispara os dados dos clientes direto pro teu email(formspree)>
+<Dores e desejos do cliente com storytelling(contaremos breves historias mais marcantes dos seus alunos), por exemplo: 
+"A vanessa sofria com dores nos joelhos e hoje consegue até pular sem dor"<- foto de antes e depois>
+<Quem sou eu>
+<Beneficios de treinar comigo(vamos colocar nomes impactantes, por exemplo: "Treinando comigo você vai acelerar em 3x seus resultados), a ideia aqui é mostrar que sem você a pessoa pode levar anos pra ter os resultados que ela teria em poucos meses>
+<Meus alunos quero um carrosel infinito com as fotos, coloque os arquivos "Assets\images\antesdepis01.jpg">
+<Pacotes promocionais>
+<Duvidas Frequentes>
+
+quero que crie uma pasta styles e separe cada css de cada parte do site, faça o mesmo para o script
+
+*o site precisa ser responsivo
+*quero que use apenas Javascript, html e css
+*o site nao tera menu
+quero toda estrutura dividida e organizada, o site todo em portugues do brasil
+*quero tudo que seja referente ao estilo da pagina esteja no css, salvos casos que um objeto sera criado via script
+sempre me responda em portugues
+
+<ideias:
+voce é um desenvolvedor experiente especialista em css e design de sites para 
+coachs de alta performance, voce tem 10 anos de experiencia com design ux.
+
+
+Ao me contratar você não irá receber apenas uma dieta e um treino ( você terá um acompanhamento semanal para atualização + feedback) wpp para tirar dúvidas em 24 h
+
+Campeão na NPC maior federação do fisiculturismo
+Especialista em Emagrecimento e Performance
+Coach Thiago Carvas
+
+9 anos de experiência ajudando +1000 pessoas 
+
+7 anos como atleta de fisiculturismo 
+
+Já tendo feito todos os tipos de treinos, dieta e cardio
+
+E com muita experiência prática para lhe ajudar, alinhado com as graduações e pós graduações 
+Diversos cursos e mentorias
+
+Se você entrar para o Time
+Não gostar do trabalho ou não obter resultados 
+Devolvo 100% do valor investido 
+
+
+Vamos fazer ancoragem aqui:
+Pacote mensal: de R$499,00 por R$349,00
+Pacote Trimestral: de R$1299 3x de R$299,00>

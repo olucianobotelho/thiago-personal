@@ -1,0 +1,63 @@
+/* ======================================================
+ * ANIMAÇÕES PERSONALIZADAS
+ * ====================================================== */
+
+/* Animação de acender lâmpada - transição suave para amarelo */
+@keyframes lightBulbOn {
+    0% {
+        color: var(--light-text);
+        text-shadow: none;
+    }
+    20% {
+        color: rgba(255, 215, 0, 0.3);
+        text-shadow: 0 0 2px rgba(255, 215, 0, 0.2);
+    }
+    40% {
+        color: rgba(255, 215, 0, 0.5);
+        text-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+    }
+    60% {
+        color: rgba(255, 215, 0, 0.7);
+        text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+    }
+    80% {
+        color: rgba(255, 215, 0, 0.9);
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    }
+    100% {
+        color: #FFD700; /* Gold/yellow color */
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    }
+}
+
+/* Classe para aplicar a animação */
+.light-up {
+    animation: lightBulbOn 1.5s ease-in-out forwards;
+}
+
+/* Variações de tempo para diferentes elementos */
+.light-up-slow {
+    animation: lightBulbOn 2.5s ease-in-out forwards;
+}
+
+.light-up-fast {
+    animation: lightBulbOn 0.8s ease-in-out forwards;
+}
+
+/* Animação para texto com brilho pulsante após acender */
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    }
+}
+
+.glow-pulse {
+    animation: lightBulbOn 1.5s ease-in-out forwards, 
+               glowPulse 2s ease-in-out infinite 1.5s;
+}

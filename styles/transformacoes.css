@@ -1,0 +1,24 @@
+/* Estilos para a seção de transformações */
+
+/* Estilos específicos para mobile - garantia centralizada */
+@media (max-width: 768px) {
+    .garantia {
+        text-align: center;
+    }
+    
+    .garantia-icon {
+        /* Centraliza o ícone no mobile */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .garantia h3 {
+        /* Garante que o título esteja centralizado */
+        text-align: center;
+    }
+    
+    .garantia p {
+        /* Garante que o texto esteja centralizado */
+        text-align: center;
+    }
+}

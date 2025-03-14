@@ -1,0 +1,160 @@
+/* Define o estilo base da seção de dúvidas */
+.section-duvidas {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 80px 0; /* Espaçamento vertical da seção */
+}
+
+/* Estiliza o título e subtítulo da seção */
+.section-duvidas .section-title,
+.section-duvidas .section-subtitle {
+    color: var(--light-text);
+    text-align: center; /* Centraliza os textos */
+}
+
+/* Container que limita a largura das dúvidas */
+.duvidas-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilo de cada item de dúvida individual */
+.duvida-item {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo levemente transparente */
+    border-radius: var(--border-radius); /* Cantos arredondados */
+    margin-bottom: 20px; /* Espaço entre os itens */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilo da área clicável com a pergunta */
+.duvida-pergunta {
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço entre o texto e o botão */
+    align-items: center; /* Alinhamento vertical centralizado */
+    padding: 25px 30px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: var(--transition); /* Animação suave */
+    min-height: 80px; /* Altura mínima para uniformidade */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Efeito hover na área da pergunta */
+.duvida-pergunta:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo mais claro ao passar o mouse */
+}
+
+/* Estilo do texto da pergunta */
+.duvida-pergunta h3 {
+    font-size: 1.2rem;
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    flex: 1; /* Ocupa o espaço disponível */
+    padding-right: 20px; /* Espaço entre o texto e o botão */
+    margin: 0; /* Remove margens padrão */
+    line-height: 1.4; /* Altura da linha para melhor legibilidade */
+}
+
+/* Estilo do botão de expandir/recolher */
+.duvida-toggle {
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    min-width: 40px; /* Largura mínima fixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--primary-color);
+    flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+/* Estilo do SVG dentro do botão */
+.duvida-toggle svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo do botão quando o item está ativo/expandido */
+.duvida-item.active .duvida-toggle {
+    background-color: transparent; /* Removido o fundo vermelho sólido */
+    color: var(--primary-color); /* Mantida a cor vermelha para o ícone */
+}
+
+/* Rotação do ícone quando ativo */
+.duvida-item.active .duvida-toggle svg {
+    transform: rotate(180deg); /* Inverte o ícone de seta */
+}
+
+/* Estilo da área de resposta (inicialmente fechada) */
+.duvida-resposta {
+    padding: 0 30px; /* Padding lateral */
+    max-height: 0; /* Altura zero quando fechado */
+    overflow: hidden; /* Esconde o conteúdo */
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; /* Animação de abertura/fechamento */
+}
+
+/* Estilo da resposta quando o item está ativo/expandido */
+.duvida-item.active .duvida-resposta {
+    padding: 10px 30px 30px; /* Aumentado: topo, laterais, base */
+    max-height: 500px; /* Altura máxima quando aberto */
+}
+
+/* Estilo do texto da resposta */
+.duvida-resposta p {
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-top: 10px;
+    margin-bottom: -10px; /* Remove margem superior */
+    font-size: 1.05rem; /* Tamanho da fonte */
+    color: rgba(255, 255, 255, 0.9); /* Cor do texto levemente transparente */
+}
+
+/* Ajustes para telas menores (tablets) */
+@media (max-width: 768px) {
+    .duvida-pergunta {
+        padding: 20px 25px; /* Padding reduzido */
+        min-height: 70px; /* Altura mínima reduzida */
+    }
+    
+    .duvida-pergunta h3 {
+        font-size: 1.1rem; /* Fonte menor */
+    }
+    
+    .duvida-toggle {
+        width: 35px; /* Botão menor */
+        height: 35px;
+        min-width: 35px;
+        font-size: 1.8rem;
+    }
+    
+    .duvida-item.active .duvida-resposta {
+        padding: 5px 30px 30px; /* Padding ajustado para telas menores */
+    }
+}
+
+/* Ajustes para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    .duvida-pergunta {
+        padding: 15px 20px;
+        min-height: 60px;
+    }
+    
+    .duvida-pergunta h3 {
+        font-size: 1rem;
+    }
+    
+    .duvida-toggle {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        font-size: 1.5rem;
+    }
+    
+    .duvida-item.active .duvida-resposta {
+        padding: 5px 25px 25px;
+    }
+}

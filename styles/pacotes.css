@@ -1,0 +1,553 @@
+/* ======================================================
+ * ESTILOS DA SEÇÃO DE PACOTES
+ * ====================================================== */
+
+/* ----------------------
+ * 1. CONFIGURAÇÃO GERAL
+ * ---------------------- */
+
+/* Estilo da seção de pacotes com fundo escuro */
+.section-pacotes {
+    background-color: var(--dark-bg);
+}
+
+/* Container flexível para organizar os cards de pacotes lado a lado */
+.pacotes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cards */
+    margin-bottom: 40px;
+    flex-direction: row-reverse; /* Inverte a ordem dos cards */
+}
+
+/* ----------------------
+ * 2. CARDS DE PACOTES
+ * ---------------------- */
+
+/* Definição base do card - estilo comum para todos os cards de pacotes */
+.pacote-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Alterado para hidden para evitar que o conteúdo ultrapasse os limites */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
+}
+
+/* Estilos específicos para o card mensal */
+.pacote-card.mensal {
+    width: 100%; /* Alterado para largura responsiva */
+    max-width: 350px; /* Limitando a largura máxima */
+    height: 100%; /* Permitindo que a altura seja determinada pelo conteúdo */
+    max-height: none; /* Removendo a limitação de altura máxima */
+    padding-bottom: 0.7%; /* Removendo o espaço na parte inferior */
+    margin-top: 10px; /* Mantendo o alinhamento vertical */
+    padding-left: 0.9%;
+    padding-right: 0.9%;
+}
+
+/* Estilos específicos para o card trimestral (destaque) */
+.pacote-card.destaque {
+    width: 100%; /* Alterado para largura responsiva */
+    max-width: 380px; /* Increasing from 350px to 380px */
+    min-height: 500px; /* Altura mínima maior para o card trimestral */
+    transform: translateY(-10px); /* Elevação para destacar */
+    border: 1px solid rgba(204, 0, 0, 0.3); /* Borda com cor vermelha */
+    box-shadow: 0 10px 30px rgba(204, 0, 0, 0.15); /* Sombra mais pronunciada */
+    transition: all 0.8s ease; /* Transição suave para a animação */
+}
+
+/* Animação de destaque para o card trimestral (sem fundo amarelo) */
+.pacote-card.destaque.highlight-yellow {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente (igual ao padrão) */
+    border: 1px solid rgba(204, 0, 0, 0.3); /* Mantendo a borda vermelha padrão */
+    box-shadow: 0 10px 30px rgba(204, 0, 0, 0.15); /* Mantendo a sombra vermelha padrão */
+}
+
+/* ----------------------
+ * 3. TARJAS E ETIQUETAS
+ * ---------------------- */
+
+/* Tarja no topo do card na horizontal - destaca o tipo de pacote */
+.pacote-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(135deg, #cc0000 0%, #ff0000 100%); /* Gradiente vermelho */
+    color: #ffffff;
+    padding: 12px 0; /* Espaçamento vertical */
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(204, 0, 0, 0.4); /* Sombra para destacar */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+    z-index: 5;
+    text-align: center;
+    animation: tagShine 3s infinite; /* Animação para chamar atenção */
+    transform: none;
+}
+
+/* Animação para a tarja - efeito de brilho */
+@keyframes tagShine {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Tarja para o plano básico - versão mais discreta */
+.pacote-tag.basico {
+    background: linear-gradient(135deg, #333333 0%, #000000 100%); /* Gradiente cinza/preto */
+    color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    animation: none; /* Sem animação para o plano básico */
+}
+
+/* ----------------------
+ * 4. CONTEÚDO DOS CARDS
+ * ---------------------- */
+
+/* Ajuste do conteúdo - organização interna do card */
+.pacote-content {
+    padding: 15px;
+    padding-top: 10px; /* Padding superior reduzido */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start; /* Alterado para alinhar conteúdo no topo */
+    position: relative;
+    overflow: visible; /* Permite que o conteúdo ultrapasse os limites se necessário */
+}
+
+/* Ajuste específico para o conteúdo do card mensal */
+.pacote-card.mensal .pacote-content {
+    padding: 5px; /* Reduzindo ainda mais o padding para tornar o card mais compacto */
+    gap: 5px; /* Reduzindo ainda mais o espaçamento entre os elementos */
+}
+
+/* Linha decorativa no topo do conteúdo */
+.pacote-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff3a3a, transparent); /* Gradiente com transparência nas bordas */
+    opacity: 0.7;
+    margin-top: 5px; /* Margem para posicionamento */
+}
+
+/* Mudança da linha decorativa quando o card está destacado em amarelo */
+.pacote-card.destaque.highlight-yellow .pacote-content::before {
+    background: linear-gradient(90deg, transparent, #FFD700, transparent); /* Gradiente amarelo */
+    opacity: 0.9;
+}
+
+/* Cabeçalho do pacote com título */
+.pacote-header {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 15px; /* Espaçamento interno */
+    text-align: center;
+    margin-top: 45px; /* Espaço para a tarja superior */
+}
+
+/* Título do pacote com efeitos visuais */
+.pacote-header h3 {
+    font-size: 2.0rem; /* Tamanho grande para destaque */
+    font-weight: 900;
+    margin-bottom: 0px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2); /* Sombra sutil */
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Linha decorativa sob o título que aparece no hover */
+.pacote-header h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0; /* Começa invisível */
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    transform: translateX(-50%);
+    transition: width 0.5s ease; /* Transição suave */
+}
+
+/* Efeito hover para a linha decorativa */
+.pacote-card:hover .pacote-header h3::after {
+    width: 80%; /* Expande a linha no hover */
+}
+
+/* Efeito hover para o título */
+.pacote-card:hover .pacote-header h3 {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Brilho dourado */
+    color: #FFD700; /* Cor dourada */
+}
+
+/* Efeito especial para o título quando o card está destacado em amarelo */
+.pacote-card.destaque.highlight-yellow .pacote-header h3 {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Brilho dourado mais intenso */
+    color: #FFD700; /* Cor dourada */
+}
+
+/* ----------------------
+ * 5. PREÇOS E INFORMAÇÕES
+ * ---------------------- */
+
+/* Container para informações de preço */
+.pacote-preco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Informação de parcelamento */
+.parcelamento {
+    font-size: 0.4rem;
+    color: var(--light-text);
+    opacity: 0.5;
+    margin: 8px 0;
+}
+
+/* ----------------------
+ * 6. LISTA DE BENEFÍCIOS
+ * ---------------------- */
+
+/* Container da lista de benefícios */
+.pacote-beneficios {
+    width: 100%;
+    margin: 10px 0 15px; /* Margens para espaçamento */
+    flex-grow: 0; /* Não expande para ocupar espaço disponível */
+}
+
+/* Itens da lista de benefícios */
+.pacote-beneficios li {
+    position: relative;
+    padding-left: 30px; /* Espaço para o ícone de verificação */
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: var(--light-text);
+    text-align: left;
+}
+
+/* Ícone de verificação (check) antes de cada item */
+.pacote-beneficios li:before {
+    content: "✓"; /* Símbolo de verificação */
+    position: absolute;
+    left: 0;
+    color: #ff0000; /* Cor vermelha para destaque */
+    font-weight: bold;
+    animation: pulse-check 2s infinite; /* Animação pulsante */
+    text-shadow: 0 0 5px rgba(220, 20, 20, 0.5); /* Brilho vermelho */
+    background: linear-gradient(135deg, #cc0000, #851919, #d8d8d8, #ff3a3a, #cc0000);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientAnimation 12s ease infinite, pulse-check 2ms infinite;
+}
+
+/* Mudança de cor do ícone de verificação quando o card está destacado em amarelo */
+.pacote-card.destaque.highlight-yellow .pacote-beneficios li:before {
+    color: #FFD700; /* Cor amarela/dourada */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Brilho amarelo */
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FFFF00, #FFD700);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* ----------------------
+ * 7. ANIMAÇÕES
+ * ---------------------- */
+
+/* Animação para os símbolos de verificação - efeito pulsante */
+@keyframes pulse-check {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta o tamanho */
+        opacity: 0.8; /* Reduz levemente a opacidade */
+        text-shadow: 0 0 8px rgba(220, 20, 20, 0.7); /* Aumenta o brilho vermelho */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Atrasos na animação para criar efeito cascata nos itens da lista */
+.pacote-beneficios li:nth-child(1):before { animation-delay: 0s; }
+.pacote-beneficios li:nth-child(2):before { animation-delay: 0.2s; }
+.pacote-beneficios li:nth-child(3):before { animation-delay: 0.4s; }
+.pacote-beneficios li:nth-child(4):before { animation-delay: 0.6s; }
+.pacote-beneficios li:nth-child(5):before { animation-delay: 0.8s; }
+.pacote-beneficios li:nth-child(6):before { animation-delay: 1s; }
+.pacote-beneficios li:nth-child(7):before { animation-delay: 1.2s; }
+
+/* ----------------------
+ * 8. AJUSTES ESPECÍFICOS
+ * ---------------------- */
+
+/* Ajustes específicos para cards não destacados - espaçamentos menores */
+.pacote-card:not(.destaque) .pacote-beneficios {
+    margin: 5px 0 10px; /* Margem reduzida */
+}
+
+.pacote-card:not(.destaque) .pacote-beneficios li:last-child {
+    margin-bottom: 5px; /* Margem inferior reduzida no último item */
+}
+
+.pacote-card:not(.destaque) .pacote-beneficios li {
+    margin-bottom: 8px; /* Espaçamento consistente entre itens */
+}
+
+.pacote-card:not(.destaque) .btn-primary {
+    margin-top: 10px; /* Margem superior do botão */
+    position: relative;
+    bottom: 0;
+}
+
+/* ----------------------
+ * 9. BOTÕES E CHAMADAS PARA AÇÃO
+ * ---------------------- */
+
+/* Classe base para botões - estilos comuns */
+.btn {
+    display: block !important;
+    background: linear-gradient(135deg, #cc0000 0%, #ff0000 100%); /* Gradiente vermelho puro */
+    color: #ffffff !important;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3); /* Sombra ajustada para tom vermelho */
+    z-index: 10;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Estilo específico para o botão do card mensal */
+.btn-mensal {
+    margin-top: 0; /* Remove espaçamento superior */
+    margin-bottom: 0; /* Remove espaçamento inferior */
+    position: relative;
+    bottom: 0;
+}
+
+/* Estilo específico para o botão do card trimestral (destaque) */
+.btn-trimestral {
+    margin-top: 0; /* Removido o espaçamento para eliminar o espaço vazio */
+    position: relative;
+}
+
+/* Mantendo a classe btn-primary para compatibilidade */
+.btn-primary {
+    margin-top: 0; /* Removido o espaçamento para eliminar o espaço vazio */
+    position: relative;
+}
+
+/* Efeito hover nos botões */
+.btn:hover {
+    transform: translateY(-3px); /* Elevação sutil */
+    box-shadow: 0 6px 20px rgba(204, 0, 0, 0.4); /* Sombra mais pronunciada em vermelho */
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%); /* Gradiente vermelho invertido */
+}
+
+/* ----------------------
+ * 10. INFORMAÇÕES ADICIONAIS
+ * ---------------------- */
+
+/* Container para informações adicionais sobre os pacotes */
+.pacote-info {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Texto de informações adicionais */
+.pacote-info p {
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9; /* Levemente transparente */
+}
+
+/* ----------------------
+ * 11. RESPONSIVIDADE
+ * ---------------------- */
+
+/* Ajustes para telas maiores (desktop) */
+@media (min-width: 769px) {
+    /* Garantindo visibilidade do botão no desktop */
+    .pacote-card .btn-primary {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 5px; /* Margem reduzida */
+    }
+    
+    /* Ajustes de espaçamento para cards não destacados no desktop */
+    .pacote-card:not(.destaque) .pacote-beneficios {
+        margin: 10px 0 5px; /* Margem inferior reduzida */
+    }
+    
+    .pacote-card:not(.destaque) .pacote-beneficios li:last-child {
+        margin-bottom: 5px; /* Margem inferior reduzida no último item */
+    }
+    
+    .pacote-card:not(.destaque) .btn-primary {
+        margin-top: 5px; /* Margem superior reduzida */
+    }
+}
+
+/* Ajustes para telas menores (tablets) */
+@media (max-width: 992px) {
+    .pacotes-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .pacote-card.destaque {
+        width: 90%;
+        max-width: 450px;
+        transform: translateY(0);
+        margin-bottom: 20px;
+        order: -1; /* Ensures the featured card appears first */
+    }
+    
+    .pacote-card.mensal {
+        width: 90%;
+        max-width: 450px;
+        max-height: none;
+        order: 1; /* Ensures the monthly card appears second */
+    }
+}
+
+/* Ajustes para telas de celular */
+@media (max-width: 576px) {
+    .pacote-card {
+        width: 95%; /* Reduzido para dar uma margem nas laterais */
+        margin: 0 auto; /* Centraliza o card */
+    }
+    
+    .pacote-card.destaque,
+    .pacote-card.mensal {
+        width: 95%;
+        max-width: 350px; /* Keeping this size for mobile */
+    }
+    
+    .pacote-content {
+        padding: 15px 10px; /* Increasing padding for better content spacing */
+    }
+    
+    .pacote-info {
+        padding: 15px 10px;
+    }
+    
+    /* Ajustes adicionais para preços em mobile */
+    .preco-antigo {
+        font-size: 0.9rem;
+    }
+    
+    .preco-atual {
+        font-size: 1.5rem;
+    }
+    
+    .preco-atual-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .preco-parcela-prefixo {
+        font-size: 0.9rem;
+        margin-right: 5px;
+    }
+    
+    /* Removendo o espaço entre o texto de parcelamento e a lista de benefícios no mobile */
+    .parcelamento {
+        margin-bottom: -100px;
+    }
+    
+    /* Ajustando o espaçamento superior da lista de benefícios no card destaque para mobile */
+    .pacote-card.destaque .pacote-beneficios {
+        margin-top: 5px;
+    }
+    
+    .somente-vista {
+        font-size: 0.8rem;
+    }
+    
+    .pagamento-opcoes {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    .pagamento-icone {
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 375px) {
+    .pacote-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .pacote-tag {
+        font-size: 0.8rem;
+        padding: 6px 0;
+    }
+    
+    .pacote-card.destaque,
+    .pacote-card.mensal {
+        width: 92%;
+        max-width: 300px;
+        padding: 0;
+    }
+    
+    .pacote-content {
+        padding: 8px 5px;
+    }
+    
+    .pacote-beneficios li {
+        font-size: 0.85rem;
+        padding-left: 22px;
+        margin-bottom: 6px;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .preco-atual {
+        font-size: 1.3rem;
+    }
+}

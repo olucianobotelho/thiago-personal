@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- No head do documento -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Thiago Carvas - Especialista em Emagrecimento e Performance</title>
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/banner.css">
+    <link rel="stylesheet" href="styles/dores.css">
+    <link rel="stylesheet" href="styles/quem-sou.css">
+    <link rel="stylesheet" href="styles/beneficios.css">
+    <link rel="stylesheet" href="styles/alunos.css">
+    <link rel="stylesheet" href="styles/pacotes.css">
+    <link rel="stylesheet" href="styles/preco.css">
+    <link rel="stylesheet" href="styles/duvidas.css">
+    <link rel="stylesheet" href="styles/transformacoes.css">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Seção Banner -->
+    <section id="banner" class="section-banner">
+        <div class="banner-overlay"></div>
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <div class="banner-badge">
+                        <span>CAMPEÃO NPC</span>
+                    </div>
+                    <h1>Transforme seu corpo e sua vida com o Coach Thiago Carvas</h1>
+                    <div class="banner-features">
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            <span>Especialista em Emagrecimento</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 12h-4V8h4v4zm0 4h-4v-4h4v4zm-8-8H8v4h4V8zm0 4H8v4h4v-4zM4 8H0v4h4V8zm0 4H0v4h4v-4z"/>
+                            </svg>
+                            <span>Performance e Hipertrofia</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                            </svg>
+                            <span>9 Anos de Experiência</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-form-container">
+                    <div class="banner-form">
+                        <div class="form-header">
+                            <h2>Comece sua transformação agora!</h2>
+                            <p>Preencha o formulário e receba um plano personalizado</p>
+                        </div>
+                        <form id="lead-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Digite seu WhatsApp" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="objetivo">Seu Objetivo</label>
+                                <select id="objetivo" name="objetivo" required>
+                                    <option value="" disabled selected>Selecione seu objetivo</option>
+                                    <option value="emagrecimento">Emagrecimento</option>
+                                    <option value="hipertrofia">Hipertrofia</option>
+                                    <option value="performance">Performance</option>
+                                    <option value="saude">Saúde e bem-estar</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <span>QUERO COMEÇAR AGORA</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="form-footer">
+                            <p>✓ Garantia de satisfação</p>
+                            <p>✓ Suporte 24/7 via WhatsApp</p>
+                            <p>✓ Plano 100% personalizado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Dores e Desejos -->
+    <section id="dores" class="section-dores">
+        <div class="container">
+            <h2 class="section-title">Transformações Reais</h2>
+            <p class="section-subtitle">Histórias de superação que podem inspirar a sua</p>
+            
+            <div class="historias-container">
+                <div class="historia-card">
+                    <div class="historia-imagens">
+                        <img src="assets/images/aluno-4.jpg" alt="Transformação de aluno" class="img-antes-depois">
+                    </div>
+                    <div class="historia-texto">
+                        <h3>Lucas superou as limitações</h3>
+                        <p>"O Lucas sofria com problemas posturais e baixa autoestima. Com um programa personalizado, ele não apenas melhorou sua postura, mas também transformou seu corpo e ganhou mais confiança no dia a dia."</p>
+                    </div>
+                </div>
+                
+                <div class="historia-card">
+                    <div class="historia-imagens">
+                        <img src="assets/images/aluno-5.jpg" alt="Transformação de aluno" class="img-antes-depois">
+                    </div>
+                    <div class="historia-texto">
+                        <h3>Mariana ganhou 8kg de massa muscular</h3>
+                        <p>"Sempre muito magra, Mariana queria ganhar massa muscular e definição. Com um plano alimentar e treinos específicos, ela conseguiu transformar seu corpo e hoje se sente muito mais confiante."</p>
+                    </div>
+                </div>
+                
+                <div class="historia-card">
+                    <div class="historia-imagens">
+                        <img src="assets/images/aluno-1.jpg" alt="Transformação de aluno" class="img-antes-depois">
+                    </div>
+                    <div class="historia-texto">
+                        <h3>Carlos perdeu 15kg em 3 meses</h3>
+                        <p>"Após anos tentando emagrecer sem sucesso, Carlos encontrou o método certo. Com acompanhamento semanal e ajustes constantes, ele conseguiu transformar seu corpo e recuperar sua autoestima."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Quem Sou Eu -->
+    <section id="quem-sou" class="section-quem-sou">
+        <div class="container">
+            <h2 class="section-title">Quem Sou Eu</h2>
+            <div class="quem-sou-content">
+                <div class="quem-sou-texto">
+                    <h3>Coach Thiago Carvas</h3>
+                    <ul class="credentials-list">
+                        <li>Campeão na NPC, maior federação do fisiculturismo</li>
+                        <li>Especialista em Emagrecimento e Performance</li>
+                        <li>9 anos de experiência ajudando +1000 pessoas</li>
+                        <li>7 anos como atleta de fisiculturismo</li>
+                        <li>Experiência com todos os tipos de treinos, dieta e cardio</li>
+                        <li>Formação acadêmica com graduações e pós-graduações</li>
+                        <li>Diversos cursos e mentorias na área</li>
+                    </ul>
+                    <div class="garantia">
+                        <div class="garantia-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                            </svg>
+                        </div>
+                        <h3>Garantia de Satisfação</h3>
+                        <p>Se você entrar para o Time, não gostar do trabalho ou não obter resultados, devolvo 100% do valor investido!</p>
+                    </div>
+                </div>
+                <div class="quem-sou-imagem">
+                    <img src="assets/images/coach-thiago.jpg" alt="Coach Thiago Carvas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section id="beneficios" class="section-beneficios">
+        <div class="container">
+            <h2 class="section-title">Benefícios de Treinar Comigo</h2>
+            <p class="section-subtitle">Por que escolher um acompanhamento profissional?</p>
+            
+            <div class="beneficios-container">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13 19V7.83l4.88 4.88c.39.39 1.03.39 1.42 0 .39-.39.39-1.02 0-1.41l-6.59-6.59c-.39-.39-1.02-.39-1.41 0l-6.6 6.58c-.39-.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L11 7.83V19c0 .55.45 1 1 1s1-.45 1-1z"/>
+                        </svg>
+                    </div>
+                    <h3>Acelere seus Resultados em 3x</h3>
+                    <p>O que levaria anos para conquistar sozinho, você alcança em poucos meses com um acompanhamento especializado.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                        </svg>
+                    </div>
+                    <h3>Acompanhamento Semanal Personalizado</h3>
+                    <p>Não é apenas uma dieta e um treino. Você terá atualizações semanais com base no seu progresso real.</p>
+                </div>
+                
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                        </svg>
+                    </div>
+                    <h3>Suporte Contínuo via WhatsApp</h3>
+                    <p>Dúvidas? Precisa de ajustes? Tenha suas questões respondidas em até 24h pelo WhatsApp.</p>
+                </div>
+                
+                <div class="beneficio-card">
+
+                    <div class="beneficio-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor">
+                            <path d="M565.6 36.2C572.1 40.7 576 48.1 576 56l0 336c0 10-6.2 18.9-15.5 22.4l-168 64c-5.2 2-10.9 2.1-16.1 .3L192.5 417.5l-160 61c-7.4 2.8-15.7 1.8-22.2-2.7S0 463.9 0 456L0 120c0-10 6.1-18.9 15.5-22.4l168-64c5.2-2 10.9-2.1 16.1-.3L383.5 94.5l160-61c7.4-2.8 15.7-1.8 22.2 2.7zM48 136.5l0 284.6 120-45.7 0-284.6L48 136.5zM360 422.7l0-285.4-144-48 0 285.4 144 48zm48-1.5l120-45.7 0-284.6L408 136.5l0 284.6z"/>
+                        </svg>
+                    </div>
+                    <h3>Plano 100% Personalizado</h3>
+                    <p>Cada corpo é único. Seu plano será desenvolvido especificamente para você, suas necessidades e objetivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Meus Alunos (Carrossel) -->
+    <section id="alunos" class="section-alunos">
+        <div class="container">
+            <h2 class="section-title">Meus Alunos</h2>
+            <p class="section-subtitle">Resultados reais de pessoas como você</p>
+            
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carousel-track">
+                        <!-- Slides do carrossel -->
+                        <div class="carousel-slide">
+                            <div class="transformation-card">
+                                <img src="assets/images/antesdepois01.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
+                                <div class="transformation-details">
+                                    <h3>Vanessa - Perda de 12kg</h3>
+                                    <p>Transformação em 3 meses com foco em emagrecimento e definição muscular.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="transformation-card">
+                                <img src="assets/images/antesdepois02.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
+                                <div class="transformation-details">
+                                    <h3>Carlos - Ganho de massa</h3>
+                                    <p>Ganho de 5kg de massa muscular e redução de percentual de gordura em 4 meses.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="transformation-card">
+                                <img src="assets/images/antesdepois04.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
+                                <div class="transformation-details">
+                                    <h3>Mariana - Definição</h3>
+                                    <p>Foco em definição muscular e melhora de performance em 3 meses de treino.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="transformation-card">
+                                <img src="assets/images/antesdepois07.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
+                                <div class="transformation-details">
+                                    <h3>João - Emagrecimento</h3>
+                                    <p>Perda de 15kg e melhora significativa na qualidade de vida em 5 meses.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="transformation-card">
+                                <img src="assets/images/antesdepois08.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
+                                <div class="transformation-details">
+                                    <h3>Patricia - Hipertrofia</h3>
+                                    <p>Ganho de 8kg de massa muscular e transformação corporal em 6 meses.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="transformation-card">
+                                <img src="assets/images/antesdepois10.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
+                                <div class="transformation-details">
+                                    <h3>Roberto - Tonificação</h3>
+                                    <p>Tonificação muscular e perda de 7% de gordura corporal em 4 meses.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button id="prev-btn" class="carousel-btn prev-btn" aria-label="Slide anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button id="next-btn" class="carousel-btn next-btn" aria-label="Próximo slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Pacotes Promocionais -->
+    <section id="pacotes" class="section-pacotes">
+        <div class="container">
+            <h2 class="section-title">Pacotes Promocionais</h2>
+            <p class="section-subtitle">Invista em você e transforme sua vida</p>
+            <div class="pacotes-container">
+                <div class="pacote-card mensal">
+                    <div class="pacote-tag basico">PLANO BÁSICO</div>
+                    <div class="pacote-header">
+                        <h3>Pacote Bimestral</h3>
+                        <div class="pacote-preco">
+                            <span class="preco-antigo">R$899,00</span>
+                            <div class="preco-parcela-prefixo">2x de</div>
+                            <span class="preco-atual">R$397,00</span>
+                            <span class="somente-vista">Parcela em até 2x no Cartão</span>
+                            <div class="pagamento-opcoes">
+                                <div class="pagamento-icone" title="PIX">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="#ffffff">
+                                        <path d="M242.4 292.5C247.8 287.1 257.1 287.1 262.5 292.5L339.5 369.5C353.7 383.7 372.6 391.5 392.6 391.5H407.7L310.6 488.6C280.3 518.1 231.1 518.1 200.8 488.6L103.3 391.2H112.6C132.6 391.2 151.5 383.4 165.7 369.2L242.4 292.5zM262.5 218.9C256.1 224.4 247.9 224.5 242.4 218.9L165.7 142.2C151.5 127.1 132.6 120.2 112.6 120.2H103.3L200.7 22.8C231.1-7.6 280.3-7.6 310.6 22.8L407.8 119.9H392.6C372.6 119.9 353.7 127.7 339.5 141.9L262.5 218.9zM112.6 142.7C126.4 142.7 139.1 148.3 149.7 158.1L226.4 234.8C233.6 241.1 243 245.6 252.5 245.6C261.9 245.6 271.3 241.1 278.5 234.8L355.5 157.8C365.3 148.1 378.8 142.5 392.6 142.5H430.3L488.6 200.8C518.9 231.1 518.9 280.3 488.6 310.6L430.3 368.9H392.6C378.8 368.9 365.3 363.3 355.5 353.5L278.5 276.5C264.6 262.6 240.3 262.6 226.4 276.6L149.7 353.2C139.1 363 126.4 368.6 112.6 368.6H80.8L22.8 310.6C-7.6 280.3-7.6 231.1 22.8 200.8L80.8 142.7H112.6z"/>
+                                    </svg>
+                                </div>
+                                <div class="pagamento-icone" title="Cartão de Crédito">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+                                        <path d="M22 4H2C0.9 4 0 4.9 0 6V18C0 19.1 0.9 20 2 20H22C23.1 20 24 19.1 24 18V6C24 4.9 23.1 4 22 4ZM22 18H2V12H22V18ZM22 9H2V6H22V9Z"/>
+                                        <rect x="3" y="13" width="2" height="3"/>
+                                        <rect x="7" y="13" width="2" height="3"/>
+                                        <rect x="11" y="13" width="2" height="3"/>
+                                    </svg>
+                                </div>
+                                <div class="pagamento-icone" title="Boleto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+                                        <path d="M2 4v16h20V4H2zm18 14H4V6h16v12zM6 8v2h12V8H6zm0 4v2h12v-2H6zm0 4v2h12v-2H6z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pacote-content">
+                        <!-- Removendo a seção duplicada de ícones de pagamento -->
+                        
+                        <ul class="pacote-beneficios">
+                            <li>Avaliação física inicial</li>
+                            <li>Plano de treino personalizado</li>
+                            <li>Plano alimentar personalizado</li>
+                            <li>1 ajuste semanal</li>
+                            <li>Suporte via WhatsApp (24h)</li>
+                        </ul>
+                        <a href="#banner" class="btn btn-trimestral">QUERO ESTE PACOTE</a>
+                    </div>
+                </div>
+                <div class="pacote-card destaque">
+                    <div class="pacote-tag">Mais vantajoso</div>
+                    <div class="pacote-header">
+                        <h3>Pacote Quadrimestral</h3>
+                        <div class="pacote-preco">
+                            <span class="preco-antigo">R$1.499,00</span>
+                            <div class="preco-atual-container">
+                                <div class="preco-parcela-prefixo">3x de</div>
+                                <span class="preco-atual">R$347,00</span>
+                            </div>
+                            <span class="parcelamento">Parcelamento em até 3x no cartão</span>
+                            <div class="pagamento-opcoes">
+                                <div class="pagamento-icone" title="PIX">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="#ffffff">
+                                        <path d="M242.4 292.5C247.8 287.1 257.1 287.1 262.5 292.5L339.5 369.5C353.7 383.7 372.6 391.5 392.6 391.5H407.7L310.6 488.6C280.3 518.1 231.1 518.1 200.8 488.6L103.3 391.2H112.6C132.6 391.2 151.5 383.4 165.7 369.2L242.4 292.5zM262.5 218.9C256.1 224.4 247.9 224.5 242.4 218.9L165.7 142.2C151.5 127.1 132.6 120.2 112.6 120.2H103.3L200.7 22.8C231.1-7.6 280.3-7.6 310.6 22.8L407.8 119.9H392.6C372.6 119.9 353.7 127.7 339.5 141.9L262.5 218.9zM112.6 142.7C126.4 142.7 139.1 148.3 149.7 158.1L226.4 234.8C233.6 241.1 243 245.6 252.5 245.6C261.9 245.6 271.3 241.1 278.5 234.8L355.5 157.8C365.3 148.1 378.8 142.5 392.6 142.5H430.3L488.6 200.8C518.9 231.1 518.9 280.3 488.6 310.6L430.3 368.9H392.6C378.8 368.9 365.3 363.3 355.5 353.5L278.5 276.5C264.6 262.6 240.3 262.6 226.4 276.6L149.7 353.2C139.1 363 126.4 368.6 112.6 368.6H80.8L22.8 310.6C-7.6 280.3-7.6 231.1 22.8 200.8L80.8 142.7H112.6z"/>
+                                    </svg>
+                                </div>
+                                <div class="pagamento-icone" title="Cartão de Crédito">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+                                        <path d="M22 4H2C0.9 4 0 4.9 0 6V18C0 19.1 0.9 20 2 20H22C23.1 20 24 19.1 24 18V6C24 4.9 23.1 4 22 4ZM22 18H2V12H22V18ZM22 9H2V6H22V9Z"/>
+                                        <rect x="3" y="13" width="2" height="3"/>
+                                        <rect x="7" y="13" width="2" height="3"/>
+                                        <rect x="11" y="13" width="2" height="3"/>
+                                    </svg>
+                                </div>
+                                <div class="pagamento-icone" title="Boleto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+                                        <path d="M2 4v16h20V4H2zm18 14H4V6h16v12zM6 8v2h12V8H6zm0 4v2h12v-2H6zm0 4v2h12v-2H6z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pacote-content">
+                        <ul class="pacote-beneficios">
+                            <li>Avaliação física inicial e mensal</li>
+                            <li>Plano de treino personalizado</li>
+                            <li>Plano alimentar personalizado</li>
+                            <li>Feedback semanal</li>
+                            <li>Suporte via WhatsApp (24h)</li>
+                        </ul>
+                        <a href="#banner" class="btn btn-trimestral">QUERO ESTE PACOTE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pacote-info">
+                <p>Ao me contratar você não irá receber apenas uma dieta e um treino. Você terá um acompanhamento semanal para atualização + feedback e WhatsApp para tirar dúvidas em 24h.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Seção Dúvidas Frequentes -->
+    <section id="duvidas" class="section-duvidas">
+        <div class="container">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <p class="section-subtitle">Respostas para as perguntas mais comuns</p>
+            
+            <div class="duvidas-container">
+                    <div class="duvida-item">
+                        <div class="duvida-pergunta">
+                            <h3>Como funciona o acompanhamento?</h3>
+                            <span class="duvida-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>O acompanhamento é feito de forma online. Após a contratação, você receberá um formulário detalhado para preenchimento. Com base nas suas informações, desenvolverei um plano personalizado de treino e alimentação. Semanalmente, faremos ajustes conforme seu progresso e você terá suporte via WhatsApp para tirar dúvidas a qualquer momento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="duvida-item">
+                        <div class="duvida-pergunta">
+                            <h3>Preciso ter experiência com musculação?</h3>
+                            <span class="duvida-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Não é necessário ter experiência prévia com musculação. O plano será adaptado ao seu nível de experiência. Se você for iniciante, receberá orientações detalhadas sobre a execução dos exercícios, incluindo vídeos explicativos quando necessário.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="duvida-item">
+                        <div class="duvida-pergunta">
+                            <h3>Posso treinar em casa ou preciso de academia?</h3>
+                            <span class="duvida-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Os planos podem ser adaptados para treinos em casa ou na academia, dependendo dos equipamentos que você tem disponíveis. No entanto, para resultados ótimos, recomendo acesso a uma academia com equipamentos básicos de musculação.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="duvida-item">
+                        <div class="duvida-pergunta">
+                            <h3>Como são feitos os ajustes semanais?</h3>
+                            <span class="duvida-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Semanalmente, você enviará fotos do seu progresso e preencherá um formulário de feedback sobre como se sentiu com o treino e a alimentação. Com base nessas informações, farei os ajustes necessários para garantir que você continue progredindo de forma constante.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="duvida-item">
+                        <div class="duvida-pergunta">
+                            <h3>E se eu tiver restrições alimentares?</h3>
+                            <span class="duvida-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Todas as restrições alimentares são consideradas no desenvolvimento do seu plano alimentar. Seja por alergias, intolerâncias, preferências pessoais ou escolhas como vegetarianismo/veganismo, seu plano será totalmente adaptado às suas necessidades.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="duvida-item">
+                        <div class="duvida-pergunta">
+                            <h3>Quanto tempo leva para ver resultados?</h3>
+                            <span class="duvida-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="duvida-resposta">
+                            <p>Os resultados variam de pessoa para pessoa, mas a maioria dos alunos começa a notar mudanças nas primeiras 2-3 semanas. Resultados mais significativos geralmente são visíveis após 4-8 semanas de comprometimento com o plano. O importante é a consistência e seguir as orientações corretamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts JS -->
+    <script src="scripts/accordion.js"></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/duvidas.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/scroll-animation.js"></script>
+    <script src="scripts/pacote-animation.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* ======================================================
+ * ESTILOS PARA EXIBIÇÃO DE PREÇOS
+ * ====================================================== */
+
+/* ----------------------
+ * 1. ESTILOS GERAIS DE PREÇO
+ * ---------------------- */
+
+/* Container para informações de preço com melhor organização */
+.pacote-preco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 15px;
+    padding: 5px;
+}
+
+/* Preço antigo (riscado) */
+.preco-antigo {
+    font-size: 1.5rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: -5px;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Preço atual com destaque */
+.preco-atual {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #e61919;
+    text-shadow: 0 0 10px rgba(220, 20, 20, 0.4);
+    margin: 5px 0;
+    display: inline-block;
+}
+
+/* Container para preço parcelado com melhor alinhamento */
+.preco-atual-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+/* Prefixo de parcela com melhor contraste */
+.preco-parcela-prefixo {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 5px;
+}
+
+/* Informação de parcelamento com melhor legibilidade */
+.parcelamento {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    opacity: 0.9;
+    margin: 8px 0;
+}
+
+/* Informação de pagamento à vista */
+.somente-vista {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 0;
+    margin: 8px 0;
+}
+
+/* ----------------------
+ * 2. OPÇÕES DE PAGAMENTO
+ * ---------------------- */
+
+/* Container para ícones de pagamento */
+.pagamento-opcoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 10px;
+}
+
+/* Ícones de métodos de pagamento */
+.pagamento-icone {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pagamento-icone:hover {
+    transform: translateY(-3px);
+    background-color: #cc0000;
+    box-shadow: 0 4px 8px rgba(204, 0, 0, 0.4);
+}
+
+/* ----------------------
+ * 3. RESPONSIVIDADE
+ * ---------------------- */
+
+/* Ajustes para telas maiores */
+@media (min-width: 992px) {
+    .preco-atual {
+        font-size: 3.2rem;
+    }
+    
+    .pacote-preco {
+        margin: 15px 0 20px;
+        padding: 15px;
+    }
+}
+
+/* Ajustes para telas médias */
+@media (max-width: 768px) {
+    .preco-atual {
+        font-size: 2.8rem;
+    }
+    
+    .preco-parcela-prefixo {
+        font-size: 1.1rem;
+    }
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 576px) {
+    .preco-atual {
+        font-size: 2.8rem;
+    }
+    
+    .preco-antigo {
+        font-size: 1rem;
+    }
+    
+    .preco-parcela-prefixo {
+        font-size: 1rem;
+    }
+    
+    .parcelamento {
+        font-size: 0.9rem;
+        margin-bottom: 10px; /* Corrigindo o valor negativo anterior */
+    }
+    
+    .somente-vista {
+        font-size: 0.9rem;
+    }
+}
