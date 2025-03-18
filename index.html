@@ -67,7 +67,7 @@
                             <h2>Comece sua transformação agora!</h2>
                             <p>Preencha o formulário e receba um plano personalizado</p>
                         </div>
-                        <form id="lead-form" action="#" method="POST">
+                        <form id="lead-form" action="https://formspree.io/f/mkgjgyjz" method="POST">
                             <div class="form-group">
                                 <label for="nome">Nome Completo</label>
                                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -90,6 +90,8 @@
                                     <option value="saude">Saúde e bem-estar</option>
                                 </select>
                             </div>
+                            <input type="hidden" name="_subject" value="Novo Lead - Site Coach Thiago Carvas">
+                            <input type="text" name="_gotcha" style="display:none">
                             <button type="submit" class="btn-primary">
                                 <span>QUERO COMEÇAR AGORA</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -97,6 +99,29 @@
                                 </svg>
                             </button>
                         </form>
+                        
+                        <div id="form-success" class="form-success" style="display: none;">
+                            <div class="success-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                            </div>
+                            <h3>Formulário enviado com sucesso!</h3>
+                            <p>Obrigado por entrar em contato! Recebemos suas informações e entrarei em contato em breve para iniciarmos sua transformação.</p>
+                            
+                            <div class="next-steps">
+                                <h4>Próximos passos:</h4>
+                                <p>Enviarei uma mensagem para você nas próximas 24 horas com informações sobre como vamos iniciar o seu processo de transformação física.</p>
+                                
+                                <a href="https://wa.me/5521976216606?text=Ol%C3%A1%20Thiago%2C%20acabei%20de%20preencher%20o%20formul%C3%A1rio%20no%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" class="btn-whatsapp">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
+                                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" fill="white"/>
+                                    </svg>
+                                    Falar no WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
                         <div class="form-footer">
                             <p>✓ Garantia de satisfação</p>
                             <p>✓ Suporte 24/7 via WhatsApp</p>
@@ -119,8 +144,8 @@
                         <img src="assets/images/aluno-4.jpg" alt="Transformação de aluno" class="img-antes-depois">
                     </div>
                     <div class="historia-texto">
-                        <h3>Lucas superou as limitações</h3>
-                        <p>"O Lucas sofria com problemas posturais e baixa autoestima. Com um programa personalizado, ele não apenas melhorou sua postura, mas também transformou seu corpo e ganhou mais confiança no dia a dia."</p>
+                        <h3>Vitor superou as limitações</h3>
+                        <p>"O Vitor sofria com problemas posturais e baixa autoestima. Com um programa personalizado, ele não apenas melhorou sua postura, mas também transformou seu corpo e ganhou mais confiança no dia a dia."</p>
                     </div>
                 </div>
                 
@@ -129,8 +154,8 @@
                         <img src="assets/images/aluno-5.jpg" alt="Transformação de aluno" class="img-antes-depois">
                     </div>
                     <div class="historia-texto">
-                        <h3>Mariana ganhou 8kg de massa muscular</h3>
-                        <p>"Sempre muito magra, Mariana queria ganhar massa muscular e definição. Com um plano alimentar e treinos específicos, ela conseguiu transformar seu corpo e hoje se sente muito mais confiante."</p>
+                        <h3>Rodrigo ganhou 8kg de massa muscular</h3>
+                        <p>"Rodrigo estava com sobrepeso, Rodrigo queria ganhar massa muscular e definição. Com um plano alimentar e treinos específicos, ele conseguiu transformar seu corpo e hoje se sente muito mais confiante."</p>
                     </div>
                 </div>
                 
@@ -139,8 +164,8 @@
                         <img src="assets/images/aluno-1.jpg" alt="Transformação de aluno" class="img-antes-depois">
                     </div>
                     <div class="historia-texto">
-                        <h3>Carlos perdeu 15kg em 3 meses</h3>
-                        <p>"Após anos tentando emagrecer sem sucesso, Carlos encontrou o método certo. Com acompanhamento semanal e ajustes constantes, ele conseguiu transformar seu corpo e recuperar sua autoestima."</p>
+                        <h3>Mariana perdeu 9kg em 2 meses</h3>
+                        <p>"Após anos tentando secar a barriga sem sucesso, Mariana encontrou o método certo. Com acompanhamento semanal e ajustes constantes, ela conseguiu transformar seu corpo e recuperar sua autoestima."</p>
                     </div>
                 </div>
             </div>
@@ -245,8 +270,8 @@
                             <div class="transformation-card">
                                 <img src="assets/images/antesdepois01.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
                                 <div class="transformation-details">
-                                    <h3>Vanessa - Perda de 12kg</h3>
-                                    <p>Transformação em 3 meses com foco em emagrecimento e definição muscular.</p>
+                                    <h3>Danrley - Perda de 7kg</h3>
+                                    <p>Transformação em 2 meses com foco em emagrecimento e definição muscular.</p>
                                 </div>
                             </div>
                         </div>
@@ -254,8 +279,8 @@
                             <div class="transformation-card">
                                 <img src="assets/images/antesdepois02.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
                                 <div class="transformation-details">
-                                    <h3>Carlos - Ganho de massa</h3>
-                                    <p>Ganho de 5kg de massa muscular e redução de percentual de gordura em 4 meses.</p>
+                                    <h3>Thiago - Queima de gordura</h3>
+                                    <p>Ganho de 11kg de massa muscular e redução de percentual de gordura em 4 meses.</p>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +288,7 @@
                             <div class="transformation-card">
                                 <img src="assets/images/antesdepois04.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
                                 <div class="transformation-details">
-                                    <h3>Mariana - Definição</h3>
+                                    <h3>Luan - Definição</h3>
                                     <p>Foco em definição muscular e melhora de performance em 3 meses de treino.</p>
                                 </div>
                             </div>
@@ -272,8 +297,8 @@
                             <div class="transformation-card">
                                 <img src="assets/images/antesdepois07.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
                                 <div class="transformation-details">
-                                    <h3>João - Emagrecimento</h3>
-                                    <p>Perda de 15kg e melhora significativa na qualidade de vida em 5 meses.</p>
+                                    <h3>Pamella - Redução de gordura</h3>
+                                    <p>Perda de 6% de gordura corporal e melhora significativa na qualidade de vida em 3 meses.</p>
                                 </div>
                             </div>
                         </div>
@@ -281,8 +306,8 @@
                             <div class="transformation-card">
                                 <img src="assets/images/antesdepois08.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
                                 <div class="transformation-details">
-                                    <h3>Patricia - Hipertrofia</h3>
-                                    <p>Ganho de 8kg de massa muscular e transformação corporal em 6 meses.</p>
+                                    <h3>Wellington - Hipertrofia</h3>
+                                    <p>Ganho de 12kg de massa muscular e transformação corporal em 10 meses.</p>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +315,7 @@
                             <div class="transformation-card">
                                 <img src="assets/images/antesdepois10.jpg" alt="Antes e depois de aluno" loading="lazy" draggable="false">
                                 <div class="transformation-details">
-                                    <h3>Roberto - Tonificação</h3>
+                                    <h3>Lucas - Tonificação</h3>
                                     <p>Tonificação muscular e perda de 7% de gordura corporal em 4 meses.</p>
                                 </div>
                             </div>
@@ -324,10 +349,11 @@
                     <div class="pacote-header">
                         <h3>Pacote Bimestral</h3>
                         <div class="pacote-preco">
-                            <span class="preco-antigo">R$899,00</span>
-                            <div class="preco-parcela-prefixo">2x de</div>
-                            <span class="preco-atual">R$397,00</span>
-                            <span class="somente-vista">Parcela em até 2x no Cartão</span>
+                            <div class="preco-atual-container">
+                                <div class="preco-parcela-prefixo">2x de</div>
+                                <span class="preco-atual">R$397,00</span>
+                            </div>
+                            <span class="somente-vista">ou R$697,00 no PIX com 12% de desconto</span>
                             <div class="pagamento-opcoes">
                                 <div class="pagamento-icone" title="PIX">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="#ffffff">
@@ -354,13 +380,13 @@
                         <!-- Removendo a seção duplicada de ícones de pagamento -->
                         
                         <ul class="pacote-beneficios">
-                            <li>Avaliação física inicial</li>
+                            <li>Avaliação do físico</li>
                             <li>Plano de treino personalizado</li>
                             <li>Plano alimentar personalizado</li>
-                            <li>1 ajuste semanal</li>
+                            <li>Atualização semanal e feedback semanal</li>
                             <li>Suporte via WhatsApp (24h)</li>
                         </ul>
-                        <a href="#banner" class="btn btn-trimestral">QUERO ESTE PACOTE</a>
+                        <a href="https://wa.me/5521976216606?text=Oi%20Thiago%2C%20quero%20come%C3%A7ar%20com%20o%20treinamento%20bimestral!" class="btn btn-trimestral">QUERO ESTE PACOTE</a>
                     </div>
                 </div>
                 <div class="pacote-card destaque">
@@ -368,12 +394,11 @@
                     <div class="pacote-header">
                         <h3>Pacote Quadrimestral</h3>
                         <div class="pacote-preco">
-                            <span class="preco-antigo">R$1.499,00</span>
                             <div class="preco-atual-container">
-                                <div class="preco-parcela-prefixo">3x de</div>
+                                <div class="preco-parcela-prefixo">4x de</div>
                                 <span class="preco-atual">R$347,00</span>
                             </div>
-                            <span class="parcelamento">Parcelamento em até 3x no cartão</span>
+                            <span class="somente-vista">ou R$1.197,00 no PIX com 14% de desconto</span>
                             <div class="pagamento-opcoes">
                                 <div class="pagamento-icone" title="PIX">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="#ffffff">
@@ -398,13 +423,13 @@
                     </div>
                     <div class="pacote-content">
                         <ul class="pacote-beneficios">
-                            <li>Avaliação física inicial e mensal</li>
+                            <li>Avaliação do físico</li>
                             <li>Plano de treino personalizado</li>
                             <li>Plano alimentar personalizado</li>
                             <li>Feedback semanal</li>
                             <li>Suporte via WhatsApp (24h)</li>
                         </ul>
-                        <a href="#banner" class="btn btn-trimestral">QUERO ESTE PACOTE</a>
+                        <a href="https://wa.me/5521976216606?text=Oi%20Thiago%2C%20quero%20come%C3%A7ar%20com%20o%20treinamento%20Quadrimestral!" class="btn btn-trimestral">QUERO ESTE PACOTE</a>
                     </div>
                 </div>
             </div>
@@ -432,7 +457,7 @@
                             </span>
                         </div>
                         <div class="duvida-resposta">
-                            <p>O acompanhamento é feito de forma online. Após a contratação, você receberá um formulário detalhado para preenchimento. Com base nas suas informações, desenvolverei um plano personalizado de treino e alimentação. Semanalmente, faremos ajustes conforme seu progresso e você terá suporte via WhatsApp para tirar dúvidas a qualquer momento.</p>
+                            <p>O acompanhamento é feito de forma online. Após a contratação, você receberá um formulário detalhado para preenchimento. Com base nas suas informações, desenvolverei um plano personalizado de treino e alimentação. Semanalmente, irei avaliar seu progresso e realizar ajustes se necessário conforme seu progresso e você terá suporte via WhatsApp para tirar dúvidas a qualquer momento.</p>
                         </div>
                     </div>
                     
@@ -517,5 +542,54 @@
     <script src="scripts/form.js"></script>
     <script src="scripts/scroll-animation.js"></script>
     <script src="scripts/pacote-animation.js"></script>
+    
+    <script>
+        // Manipulação do formulário Formspree
+        document.getElementById('lead-form').addEventListener('submit', function(event) {
+            var form = this;
+            var submitBtn = form.querySelector('button[type="submit"]');
+            var btnText = submitBtn.querySelector('span');
+            var originalText = btnText.textContent;
+            var formSuccess = document.getElementById('form-success');
+            
+            // Altera o texto do botão durante o envio
+            btnText.textContent = "ENVIANDO...";
+            submitBtn.disabled = true;
+            
+            // Intercepta o envio do formulário para mostrar a mensagem de sucesso
+            event.preventDefault();
+            
+            // Envia os dados usando fetch API
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Esconde o formulário e mostra a mensagem de sucesso
+                    form.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                    
+                    // Scroll suave para a mensagem de sucesso
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    
+                    // Registra a conversão (se necessário)
+                    console.log('Formulário enviado com sucesso!');
+                } else {
+                    throw new Error('Erro ao enviar o formulário');
+                }
+            })
+            .catch(error => {
+                // Restaura o botão em caso de erro
+                btnText.textContent = originalText;
+                submitBtn.disabled = false;
+                alert("Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.");
+                console.error(error);
+            });
+        });
+    </script>
 </body>
 </html>

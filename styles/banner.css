@@ -221,6 +221,91 @@
     font-size: 0.9rem;
 }
 
+/* Mensagem de sucesso do formulário */
+.form-success {
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.5s ease;
+    animation: fadeIn 0.8s;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
+.form-success h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.form-success p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.form-success .next-steps {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.form-success .next-steps h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp svg {
+    margin-right: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes responsivos */
 @media (max-width: 1024px) {
     .section-banner {
         min-height: 70vh;
@@ -413,5 +498,30 @@
     .form-footer p {
         font-size: 0.8rem;
         margin: 0.3rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-success h3 {
+        font-size: 1.5rem;
+    }
+    
+    .form-success p, 
+    .form-success .next-steps p {
+        font-size: 1rem;
+    }
+    
+    .form-success .next-steps {
+        padding: 15px;
+    }
+    
+    .success-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .success-icon svg {
+        width: 35px;
+        height: 35px;
     }
 }
